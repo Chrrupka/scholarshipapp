@@ -78,10 +78,12 @@
     "key-spacing": "off",
     "keyword-spacing": ["error", {"before": true, "after": true}],
     "line-comment-position": "off",
-    "linebreak-style": [
+  /*  "linebreak-style": [
       "error",
       "unix"
-    ],
+    ],*/
+
+    "linebreak-styl": "off",
     "lines-around-comment": "off",
     "lines-around-directive": "off",
     "max-depth": "error",

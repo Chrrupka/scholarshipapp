@@ -1,0 +1,12 @@
+[
+  {
+    "applicationId":"000001",
+    "file_name": "attachment1.pdf",
+    "file_data": "base64_encoded_data_here"
+  },
+  {
+    "applicationId":"000002",
+    "file_name": "attachment2.jpg",
+    "file_data": "base64_encoded_data_here"
+  }
+]

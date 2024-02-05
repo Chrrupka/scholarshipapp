@@ -1,4 +1,7 @@
-import BookModel from '../app/models/book';
+import ApplicationModel from '../app/models/application';
+import AttachmentModel from '../app/models/attachment';
+import DetailsModel from '../app/models/details';
+import StudentModel from '../app/models/student';
 import config from '../app/config';
 import mongoose from 'mongoose';
 import PasswordModel from '../app/models/password';
@@ -12,8 +15,14 @@ function prepare() {
       return TokenModel.deleteMany({});
     }).then(() => {
       return PasswordModel.deleteMany({});
-    }).then(() => {
-      return BookModel.deleteMany({});
+      }).then(() => {
+        return ApplicationModel.deleteMany({});
+      }).then(() => {
+        return AttachmentModel.deleteMany({});
+      }).then(() => {
+        return DetailsModel.deleteMany({});
+      }).then(() => {
+        return StudentModel.deleteMany({});
     });
 }
 
@@ -22,9 +31,18 @@ function seed() {
     .then(() => {
       return PasswordModel.create(require('./seedSchemas/password.json'));
     })
-    .then(() => {
-      return BookModel.create(require('./seedSchemas/book.json'));
-    });
+      .then(() => {
+        return ApplicationModel.create(require('./seedSchemas/application.json'));
+      })
+      .then(() => {
+        return AttachmentModel.create(require('./seedSchemas/attachment.json'));
+      })
+      .then(() => {
+        return DetailsModel.create(require('./seedSchemas/details.json'));
+      })
+      .then(() => {
+        return StudentModel.create(require('./seedSchemas/student.json'));
+      });
 }
 
 (function run() {

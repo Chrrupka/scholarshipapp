@@ -1,0 +1,17 @@
+[
+  {
+    "applicationId":"000001",
+    "album_id": "22222",
+    "pesel": "12345678901",
+    "phone_number": "124567890",
+    "address": "123 Main Street",
+  },
+  {
+    "applicationId":"000002",
+    "album_id": "33333",
+    "pesel": "98765432109",
+    "phone_number": "986543210",
+    "address": "456 Elm Street"
+  }
+
+]

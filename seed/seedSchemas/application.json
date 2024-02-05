@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "000001",
+    "type": "Type I",
+    "status": "Status I",
+  },
+  {
+    "_id": "000002",
+    "type": "Type II",
+    "status": "Status II",
+  }
+]

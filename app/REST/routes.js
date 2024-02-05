@@ -1,7 +1,10 @@
 import hapiAuthBearerToken from 'hapi-auth-bearer-token';
 import business from '../business/business.container';
 import userEndpoint from './user.endpoint';
-import bookEndpoint from './book.endpoint';
+import applicationEndpoint from './application.endpoint';
+import attachmentEndpoint from './attachment.endpoint';
+import detailsEndpoint from './details.endpoint';
+import studentEndpoint from './student.endpoint';
 
 const routes = {
   async secureRoutes(server) {
@@ -28,12 +31,19 @@ const routes = {
   },
   register(server) {
     userEndpoint.register(server);
-    bookEndpoint.register(server);
+    applicationEndpoint.register(server);
+    attachmentEndpoint.register(server);
+    detailsEndpoint.register(server);
+    studentEndpoint.register(server);
   },
   tags() {
     return [
-      userEndpoint.tag,
-      bookEndpoint.tag
+        userEndpoint.tag,
+        applicationEndpoint.tag,
+        attachmentEndpoint.tag,
+        detailsEndpoint.tag,
+        studentEndpoint.tag
+
     ];
   }
 };
