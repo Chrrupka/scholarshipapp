@@ -9,6 +9,9 @@ function create(context)  {
     async function getDetailsById(id) {
             return await DetailsDAO.getDetailsById(id);
     }
+    async function getAll(){
+        return await DetailsDAO.getAll();
+    }
 
     async function updateDetails(id, payload) {
             return await DetailsDAO.updateDetails(id, payload);
@@ -21,7 +24,8 @@ function create(context)  {
         createDetails: createDetails,
         getDetailsById: getDetailsById,
         updateDetails: updateDetails,
-        removeDetailsById: removeDetailsById
+        removeDetailsById: removeDetailsById,
+        getAll: getAll
     };
 }
 
