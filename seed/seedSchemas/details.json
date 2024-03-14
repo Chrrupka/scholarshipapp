@@ -1,19 +1,17 @@
 [
   {
-    "applicationId":"000001",
+    "applicationId":"51eae100c2e6b6c222ec0000",
     "specialization": "Computer Science",
     "education_level": "Bachelor's",
     "study_system": "Full-time",
-    "bank_account_number": "PL01234567890123456789012",
     "current_study_year": 2,
     "other_details": "Some additional details about the student"
   },
   {
-    "applicationId":"000002",
+    "applicationId":"51eae100c2e6b6c222ec0001",
     "specialization": "Electrical Engineering",
     "education_level": "Master's",
     "study_system": "Part-time",
-    "bank_account_number": "PL98765432109876543210987",
     "current_study_year": 3,
     "other_details": "More details about another student"
   }

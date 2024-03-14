@@ -6,9 +6,8 @@ const detailsSchema = new Schema({
     specialization: { type: String, required: true },
     education_level: { type: String, required: true },
     study_system: { type: String, required: true },
-    bank_account_number: { type: String, required: true, maxlength: 26 },
     current_study_year: { type: Number, required: true },
-    other_details: { type: String, required: true }
+    other_details: { type: String, required: false }
 }, {
     collection: 'details'
 });

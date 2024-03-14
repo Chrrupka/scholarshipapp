@@ -1,3 +1,4 @@
+import ApplicationModel from '../models/application';
 import applicationException from '../service/applicationException';
 import mongoConverter from '../service/mongoConverter';
 
@@ -31,9 +32,18 @@ async function removeById(id) {
     return await DetailsModel.findByIdAndRemove(id);
 }
 
+async function getAll() {
+    const result = await DetailsModel.find();
+    if (result) {
+        return mongoConverter(result);
+    }
+    throw applicationException.new(applicationException.NOT_FOUND, 'Details not found');
+}
+
 export default {
     createDetails: createDetails,
     getDetailsById: getDetailsById,
     updateDetails: updateDetails,
-    removeById: removeById
+    removeById: removeById,
+    getAll: getAll
 };

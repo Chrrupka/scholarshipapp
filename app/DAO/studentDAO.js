@@ -33,7 +33,7 @@ async function removeById(id) {
 }
 
 async function getAll() {
-    const result = StudentModel.find();
+    const result = await StudentModel.find();
     if (result){
         return mongoConverter(result);
     }
